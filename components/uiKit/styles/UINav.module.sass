@@ -1,0 +1,51 @@
+.uiNav
+  @apply flex flex-col
+  & > :global(.ui-button)
+    @apply relative
+    &:first-child
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+    &:last-child
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+    &:not(:last-child)
+      &::before
+        content: ''
+        position: absolute
+        width: 83%
+        right: 0
+        bottom: 0
+        height: 1px
+        background: var(--tg-theme-text-color)
+        opacity: 15%
+  & > :global(.ui-property)
+    @apply relative
+    &:first-child
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+    &:last-child
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+    &:not(:last-child)
+      &::before
+        content: ''
+        position: absolute
+        width: 95%
+        right: 0
+        bottom: 0
+        height: 1px
+        background: var(--tg-theme-text-color)
+        opacity: 15%
+  & > :global(.ui-start)
+    @apply relative
+
+    &:not(:last-child)
+      &::before
+        content: ''
+        position: absolute
+        width: 95%
+        right: 0
+        bottom: 0
+        height: 1px
+        background: var(--tg-theme-text-color)
+        opacity: 15%

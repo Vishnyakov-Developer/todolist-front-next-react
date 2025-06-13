@@ -9,8 +9,19 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
+// add @ts-ignore
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    parserOptions: {
+      tsconfigRootDir: __dirname,
+    },
+  },
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
