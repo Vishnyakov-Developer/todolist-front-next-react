@@ -18,7 +18,7 @@ export function MainButton({ text, onClick }: Props) {
 
     return () => {
       tg.MainButton.offClick(onClick);
-      tg.MainButton.hide();
+      // tg.MainButton.hide();
     };
   }, [tg, text, onClick]);
 

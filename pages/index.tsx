@@ -23,7 +23,7 @@ import { useSelector } from 'react-redux';
 
 
 export default function Home() {
-  const tg = useTelegram();
+  // const tg = useTelegram();
   const router = useRouter()
 
   const dispatch = useAppDispatch();

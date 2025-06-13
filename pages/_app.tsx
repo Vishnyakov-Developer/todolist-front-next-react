@@ -4,6 +4,7 @@ import requestValidate from "../requests/requestValidate";
 import { ToasterProvider } from "@/lib/ToasterContext";
 import { Provider } from 'react-redux';
 import { store } from '@/store';
+import { TelegramMainButtonProvider } from "@/lib/TelegramMainButtonContext";
 
 declare global {
   // interface Window {
@@ -26,7 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return <ToasterProvider>
     <script src="https://telegram.org/js/telegram-web-app.js"/>
     <Provider store={store}>
-      <Component {...pageProps} />
+      <TelegramMainButtonProvider>
+        <Component {...pageProps} />
+      </TelegramMainButtonProvider>
     </Provider>
   </ToasterProvider>
 }
